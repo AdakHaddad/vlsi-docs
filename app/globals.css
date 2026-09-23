@@ -1,26 +1,81 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-primary: #00592B;
+  --color-primary-dark: #003d1e;
+  --color-primary-light: #007c3c;
+  --color-primary-lightest: #e5f5eb;
+  
+  --color-secondary: #0023D1;
+  
+  --color-text-main: #111827;
+  --color-text-muted: #4b5563;
+  --color-text-light: #9ca3af;
+  
+  --color-surface: #FFFFFF;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-background: #f9fafb;
+  
+  --color-info-border: #3b82f6;
+  --color-info-bg: #eff6ff;
+  --color-info-text: #1e3a8a;
+  
+  --color-warning-border: #f59e0b;
+  --color-warning-bg: #fffbeb;
+  --color-warning-text: #92400e;
+  
+  --color-success-border: #10b981;
+  --color-success-bg: #ecfdf5;
+  --color-success-text: #065f46;
+
+  --color-hw-border: #00592B;
+  --color-hw-bg: #e5f5eb;
+  --color-hw-text: #003d1e;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-primary: var(--color-primary);
+  --color-primary-dark: var(--color-primary-dark);
+  --color-primary-light: var(--color-primary-light);
+  --color-primary-lightest: var(--color-primary-lightest);
+  --color-secondary: var(--color-secondary);
+  --color-text-main: var(--color-text-main);
+  --color-text-muted: var(--color-text-muted);
+  --color-text-light: var(--color-text-light);
+  --color-surface: var(--color-surface);
+  --color-surface-hover: var(--color-surface-hover);
+  --color-surface-active: var(--color-surface-active);
+  --color-background: var(--color-background);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-info-border: var(--color-info-border);
+  --color-info-bg: var(--color-info-bg);
+  --color-info-text: var(--color-info-text);
+  --color-warning-border: var(--color-warning-border);
+  --color-warning-bg: var(--color-warning-bg);
+  --color-warning-text: var(--color-warning-text);
+  --color-success-border: var(--color-success-border);
+  --color-success-bg: var(--color-success-bg);
+  --color-success-text: var(--color-success-text);
+  --color-hw-border: var(--color-hw-border);
+  --color-hw-bg: var(--color-hw-bg);
+  --color-hw-text: var(--color-hw-text);
+
+  --font-heading: var(--font-oswald);
+  --font-mono: var(--font-jetbrains-mono);
+  --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-primary);
+  color: var(--color-text-main);
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+code, pre {
+  font-family: var(--font-mono);
 }

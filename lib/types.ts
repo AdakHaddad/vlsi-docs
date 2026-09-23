@@ -81,7 +81,7 @@ export interface CircuitDef {
 
 export interface WaveformSignal {
   name: string
-  values: (0 | 1 | 'x' | 'z')[] // per clock cycle
+  values: (number | 'x' | 'z')[] // per clock cycle
   isClock?: boolean
 }
 
